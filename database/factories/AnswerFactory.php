@@ -17,7 +17,7 @@ class AnswerFactory extends Factory
     public function definition(): array
     {
         return [
-            'body' => fake()->realTextBetween(200, 500),
+            'body' => $this->faker->realTextBetween(200, 500),
 
             'votes_count' => rand(-3, 20),
 

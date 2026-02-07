@@ -17,8 +17,8 @@ class QuestionFactory extends Factory
     public function definition(): array
     {
         return [
-              'title'        => rtrim(fake()->unique()->realText(rand(50, 80)), '.'),
-            'body'         => fake()->realTextBetween(200, 500),
+              'title'        => rtrim($this->faker->unique()->realText(rand(50, 80)), '.'),
+            'body'         => $this->faker->realTextBetween(200, 500),
             'views'=>(rand(0,10)),
             'answer_count'=>(rand(0,15)),
             //'votes_count' =>rand(-3,40),
